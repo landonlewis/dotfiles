@@ -1,10 +1,3 @@
-# Path to your oh-my-zsh configuration.
-export ZSH=$HOME/.oh-my-zsh
-
-# Set to the name theme to load.
-# Look in ~/.oh-my-zsh/themes/
-export ZSH_THEME="robbyrussell"
-
 # Set to this to use case-sensitive completion
 # export CASE_SENSITIVE="true"
 
@@ -18,8 +11,6 @@ export ZSH_THEME="robbyrussell"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(git pip brew github)
 
-source $ZSH/oh-my-zsh.sh
-
 # Customize to your needs...
 bindkey -v
 
@@ -29,3 +20,10 @@ alias mysql=/usr/local/mysql/bin/mysql
 alias mysqladmin=/usr/local/mysql/bin/mysqladmin
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
+
+# Git shortcuts
+alias gs='git status'
+
+function gc () {
+    git commit -m $1
+}
