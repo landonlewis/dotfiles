@@ -23,7 +23,7 @@ source $ZSH/oh-my-zsh.sh
 # Customize to your needs...
 bindkey -v
 
-source .ssh_sites
+source $HOME/.dotfiles/.ssh_sites
 
 alias mysql=/usr/local/mysql/bin/mysql
 alias mysqladmin=/usr/local/mysql/bin/mysqladmin
