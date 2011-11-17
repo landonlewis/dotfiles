@@ -16,3 +16,4 @@ syntax enable
 colorscheme molokai
 
 set ruler
+set ignorecase
