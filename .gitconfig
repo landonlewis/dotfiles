@@ -1,0 +1,18 @@
+[user]
+	name = Landon Lewis
+	email = me@landonlewis.com
+[core]
+    excludesfile = ~/.dotfiles/.gitignore
+[alias]
+    st = status
+    co = checkout
+    ci = commit -v
+    cp = cherry-pick
+    ac = !git add -A && git ci
+    br = branch --verbose
+    dc = diff --cached
+    conflicted = !git ls-files -u | cut -f 2 | sort -u
+[color]
+    ui = auto
+[gist]
+    private = true
