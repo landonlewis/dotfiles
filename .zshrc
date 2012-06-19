@@ -9,10 +9,11 @@
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git pip brew github)
+#plugins=(git pip brew github)
 
 # Customize to your needs...
 bindkey -v
+bindkey '^R' history-incremental-search-backward
 
 source $HOME/.dotfiles/.ssh_sites
 
@@ -23,7 +24,19 @@ alias mysqladmin=/usr/local/mysql/bin/mysqladmin
 
 # Git shortcuts
 alias gs='git status'
+#
+#function gc () {
+#    git commit -m $1
+#}
 
-function gc () {
-    git commit -m $1
-}
+# Shortcuts
+alias ls='ls -la'
+
+# Need this for git complete to work
+autoload -U compinit && compinit
+
+# Update PATH
+export PATH=/usr/local/bin:$PATH
+
+# Start tmux on every new session
+[[ $TERM != "screen" ]] && exec tmux
