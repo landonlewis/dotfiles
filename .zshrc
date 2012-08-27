@@ -20,7 +20,7 @@ source $HOME/.dotfiles/.ssh_sites
 alias mysql=/usr/local/mysql/bin/mysql
 alias mysqladmin=/usr/local/mysql/bin/mysqladmin
 
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
+# [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
 
 # Git shortcuts
 alias gs='git status'
@@ -40,3 +40,6 @@ export PATH=/usr/local/bin:$PATH
 
 # Start tmux on every new session
 [[ $TERM != "screen" ]] && exec tmux
+
+# PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+
