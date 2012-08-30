@@ -23,7 +23,12 @@ alias mysqladmin=/usr/local/mysql/bin/mysqladmin
 
 # Git shortcuts
 alias gs='git status'
+alias gc='git commit'
 
-function gc () {
-    git commit -m $1
-}
+alias ls='ls -la'
+
+export PATH="${PATH}:/usr/local/share/python"
+export PS1="Ted's Mom $ "
+
+# Flush cache
+alias flushcache='dscacheutil -flushcache'
