@@ -9,26 +9,38 @@
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git pip brew github)
+#plugins=(git pip brew github)
 
 # Customize to your needs...
 bindkey -v
+bindkey '^R' history-incremental-search-backward
 
 source $HOME/.dotfiles/.ssh_sites
 
 alias mysql=/usr/local/mysql/bin/mysql
 alias mysqladmin=/usr/local/mysql/bin/mysqladmin
 
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
+# [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
 
 # Git shortcuts
 alias gs='git status'
-alias gc='git commit'
 
+# Flush cache
+alias flushcache='dscacheutil -flushcache'
+
+# Shortcuts
 alias ls='ls -la'
 
 export PATH="${PATH}:/usr/local/share/python"
 export PS1="Ted's Mom $ "
 
-# Flush cache
-alias flushcache='dscacheutil -flushcache'
+# Update PATH
+export PATH=/usr/local/bin:$PATH
+
+# Need this for git complete to work
+autoload -U compinit && compinit
+
+# Start tmux on every new session
+[[ $TERM != "screen" ]] && exec tmux
+
+# PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting

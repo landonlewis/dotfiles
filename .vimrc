@@ -2,7 +2,6 @@
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
-set expandtab
 
 " Use spaces instead of tabs
 set expandtab
@@ -13,7 +12,12 @@ set nowrap
 syntax enable
 " set background=dark
 " colorscheme solarized
-colorscheme molokai
+:colorscheme molokai
 
 set ruler
 set ignorecase
+set rnu
+
+filetype plugin indent on
+
+let mapleader = ","
