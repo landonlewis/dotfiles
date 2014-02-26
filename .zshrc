@@ -20,8 +20,6 @@ source $HOME/.dotfiles/.ssh_sites
 alias mysql=/usr/local/mysql/bin/mysql
 alias mysqladmin=/usr/local/mysql/bin/mysqladmin
 
-# [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
-
 # Git shortcuts
 alias gs='git status'
 
@@ -35,12 +33,19 @@ export PATH="${PATH}:/usr/local/share/python"
 export PS1="Ted's Mom $ "
 
 # Update PATH
-export PATH=/usr/local/bin:$PATH
+export PATH=/usr/local/share/npm/bin:/usr/local/bin:$PATH
 
 # Need this for git complete to work
 autoload -U compinit && compinit
 
 # Start tmux on every new session
-[[ $TERM != "screen" ]] && exec tmux
+# Turned this off so I can use tmuxinator
+#[[ $TERM != "screen" ]] && exec tmux
 
-# PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" 
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+source /etc/profile
+
+# Tmuxinator
+source ~/.bin/tmuxinator.zsh

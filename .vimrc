@@ -10,9 +10,9 @@ set expandtab
 set nowrap
 
 syntax enable
-" set background=dark
-" colorscheme solarized
-:colorscheme molokai
+set background=dark
+colorscheme solarized
+" :colorscheme molokai
 
 set ruler
 set ignorecase
@@ -21,3 +21,6 @@ set rnu
 filetype plugin indent on
 
 let mapleader = ","
+
+" Call pathogen
+call pathogen#infect() 
