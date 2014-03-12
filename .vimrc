@@ -1,3 +1,6 @@
+" Call pathogen
+call pathogen#infect() 
+
 " 4 spaces
 set tabstop=4
 set shiftwidth=4
@@ -11,16 +14,14 @@ set nowrap
 
 syntax enable
 set background=dark
+let g:solarized_termcolors=256
 colorscheme solarized
-" :colorscheme molokai
 
 set ruler
 set ignorecase
 set rnu
 
-filetype plugin indent on
-
 let mapleader = ","
 
-" Call pathogen
-call pathogen#infect() 
+" CtrlP settings "
+set wildignore+=*.swp,*.pyc

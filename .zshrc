@@ -39,13 +39,15 @@ export PATH=/usr/local/share/npm/bin:/usr/local/bin:$PATH
 autoload -U compinit && compinit
 
 # Start tmux on every new session
-# Turned this off so I can use tmuxinator
-#[[ $TERM != "screen" ]] && exec tmux
+[[ $TERM != "screen" ]] && exec tmux
 
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" 
-
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 source /etc/profile
 
-# Tmuxinator
-source ~/.bin/tmuxinator.zsh
+# VirtualEnvWrapper
+export WORKON_HOME=$HOME/.virtualenvs
+export PROJECT_HOME=$HOME/Projects
+source /usr/local/bin/virtualenvwrapper.sh
+
+#RBEnv
+echo 'eval "$(rbenv init -)"' >> ~/.zlogin
+source ~/.zlogin
