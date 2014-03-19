@@ -48,6 +48,5 @@ export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/Projects
 source /usr/local/bin/virtualenvwrapper.sh
 
-#RBEnv
-echo 'eval "$(rbenv init -)"' >> ~/.zlogin
-source ~/.zlogin
+#RBenv
+if which rbenv > /dev/null; then eval "$(rbenv init - zsh)"; fi
